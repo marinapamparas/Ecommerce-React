@@ -1,0 +1,18 @@
+
+.logoimg{
+    width: 100px;
+    height: 100px;
+}
+
+.navbar{
+    background-color: rgb(246, 236, 200);
+    --bs-bg-opacity: 1;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+
+.navbarcontainer{
+    margin: 0px;   
+}
+

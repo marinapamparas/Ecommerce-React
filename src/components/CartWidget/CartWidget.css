@@ -1,0 +1,25 @@
+
+
+.imgcart{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: rgb(246, 236, 200);
+   
+}
+
+.cartcounter{
+    font-size: 12px;
+    color: rgb(252, 251, 255);
+    background-color: rgba(128, 128, 128, 0.264);
+    padding: 0px 13px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}

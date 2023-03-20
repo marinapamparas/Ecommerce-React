@@ -1,0 +1,14 @@
+.contenedoritemlist{
+    margin:  15px 300px;
+    padding: 30px 10px;
+    padding-bottom: 20px;
+    background-color: rgb(246, 236, 200);
+    border-radius: 30px;
+}
+
+.h1{
+    font-size: 15px;
+    color: rgb(204, 71, 71);
+    font-style: italic;
+    text-align: center;
+}
