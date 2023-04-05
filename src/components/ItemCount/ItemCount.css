@@ -1,0 +1,12 @@
+.contador{
+    width: 200px;
+    height: 200px;
+    margin: 70px;
+}
+
+.contenedorButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+}
