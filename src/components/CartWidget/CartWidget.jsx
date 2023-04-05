@@ -1,4 +1,4 @@
-import cart from './assets/carrito.png'
+import cart from 'c://Users/Marina/Desktop/MarinaPamparas/MarinaPamparas/src/assets/carrito.png'
 import './CartWidget.css'
 
 
