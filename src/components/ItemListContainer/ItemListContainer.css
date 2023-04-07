@@ -1,14 +1,15 @@
 .contenedoritemlist{
-    margin:  15px 300px;
-    padding: 30px 10px;
+    margin:  10px;
+    padding: 30px;
     padding-bottom: 20px;
-    background-color: rgb(246, 236, 200);
     border-radius: 30px;
 }
 
 .h1{
-    font-size: 15px;
+    background-color: rgba(246, 236, 200, 0.341);
+    font-size: 20px;
     color: rgb(204, 71, 71);
-    font-style: italic;
     text-align: center;
+    margin: 10px 5px 0px 5px;
+    padding: 20px;
 }

@@ -14,7 +14,7 @@ function App() {
     <NavBar/>
 
     <Routes>
-      <Route path='/' element={<ItemListContainer greeting='Hola! Soy Marina Pamparas y este es mi proyecto'/>} />
+      <Route path='/' element={<ItemListContainer greeting='Productos de Artistica al mejor costo'/>} />
       <Route path='/count' element={<ItemCount initial= {1} stock={10} onAdd={(quantity) =>console.log('Cantidad agregada', quantity)} />} />
     
       <Route path='*' element={<Navigate/>} to='/'/>
