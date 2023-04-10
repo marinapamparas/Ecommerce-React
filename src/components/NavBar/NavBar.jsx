@@ -4,20 +4,23 @@ import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import logo from 'c://Users/Marina/Desktop/MarinaPamparas/MarinaPamparas/src/assets/logo.png';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
     return(
         <Navbar expand="md" className='navbar'>
             <Container className="navbarcontainer">
-                <Navbar.Brand href="#home"><img src={logo} alt="logo Painti" className='logoimg'/></Navbar.Brand>
+                <Link to='/' ><img src={logo} alt="logo Painti" className='logoimg'/></Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#inicio">Inicio</Nav.Link>
-                        <Nav.Link href="#productos">Productos</Nav.Link>
-                        <Nav.Link href="#promociones">Promociones</Nav.Link>
-                        <Nav.Link href="#contacto">Contacto</Nav.Link>
+
+                        <NavLink to={`/category/Pintura`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pinturas</NavLink>
+                        <NavLink to={`/category/Pastas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pastas</NavLink>
+                        <NavLink to={`/category/Barnices y lacas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Barnices y Lacas</NavLink>
+                        
+
                     </Nav>
                 </Navbar.Collapse>
                 

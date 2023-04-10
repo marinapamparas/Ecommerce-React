@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import "./Item.css"
-import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
+import "./ItemDetail.css"
 
-const Item = ({id, name, img, price, stock}) => {
+const ItemDetail = ({id, name, price, img, category, stock, description}) => {
 
     return (
 
@@ -16,11 +16,13 @@ const Item = ({id, name, img, price, stock}) => {
                 <Card.Title> {name} </Card.Title>
             
                 <Card.Text>
+                    Categoria: {category} <br></br>
                     Precio: ${price} <br></br>
-                    Stock disponible: {stock}
+                    Stock disponible: {stock}<br></br>
+                    Descripción: {description}<br></br>
                 </Card.Text>
                 
-                <Link to={`/item/${id}`}>Ver detalle</Link>
+                <ItemCount initial= {1} stock={10} onAdd={(quantity) =>console.log('Cantidad agregada', quantity)} />
                 
             </Card.Body>
         </Card>
@@ -30,4 +32,4 @@ const Item = ({id, name, img, price, stock}) => {
 
 }
 
-export default Item
+export default ItemDetail
