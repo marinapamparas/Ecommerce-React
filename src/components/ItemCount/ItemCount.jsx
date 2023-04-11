@@ -22,12 +22,12 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     return (
         <div className='contador'>
             <div className='contenedorButton'>
-                <Button onClick={decrement} variant="outline-dark">-</Button>
-                <h3>{quantity}</h3>
-                <Button onClick={increment} variant="outline-dark">+</Button>
+                <Button onClick={decrement} className="colorBoton" variant="outline-light">-</Button>
+                <h3 className='cantidad'>{quantity}</h3>
+                <Button onClick={increment} className="colorBoton" variant="outline-light">+</Button>
             </div>
-            <div className='contenedorButton'>
-                <Button variant="outline-success" onClick={() => onAdd (quantity)} disabled ={!stock}>
+            <div>
+                <Button className='botonAgregar' onClick={() => onAdd (quantity)} disabled ={!stock}>
                     Agregar al Carrito
                 </Button>
             </div>

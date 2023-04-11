@@ -16,16 +16,16 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
 
-                        <NavLink to={`/category/Pintura`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pinturas</NavLink>
-                        <NavLink to={`/category/Pastas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pastas</NavLink>
-                        <NavLink to={`/category/Barnices y lacas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Barnices y Lacas</NavLink>
-                        
+                        <NavLink to={`/category/Pintura`} className={({isActive}) => isActive ? 'NavActiva' : 'NavPasiva'}>Pinturas</NavLink>
+                        <NavLink to={`/category/Pastas`} className={({isActive}) => isActive ? 'NavActiva' : 'NavPasiva'}>Pastas</NavLink>
+                        <NavLink to={`/category/Barnices y lacas`} className={({isActive}) => isActive ? 'NavActiva' : 'NavPasiva'}>Barnices y Lacas</NavLink>
+                        <CartWidget/>
 
                     </Nav>
                 </Navbar.Collapse>
                 
             </Container>
-            <CartWidget/>
+           
         </Navbar>
     )
 }

@@ -1,12 +1,43 @@
 .contador{
-    width: 200px;
-    height: 200px;
-    margin: 70px;
+    width: 45vw;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
 }
 
 .contenedorButton{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.botonAgregar{
+    width: 20vw;
+    margin-left: 50px;
+    padding: 10px 5px;
+    background-color: rgb(29, 24, 17) !important;
+    color: white;
+}
+
+.colorBoton{
+    display: flex;
+    justify-content: center;
+    color: rgb(29, 24, 17);
+    background-color: white;
+    border-color: white;
+    font-size: 20px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.cantidad{
+    color: rgb(29, 24, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    margin: 0px;
+    padding: 0px 20px;
 }

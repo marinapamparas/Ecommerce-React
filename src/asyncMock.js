@@ -1,7 +1,7 @@
 const products = [
     {
         id: '1',
-        name: 'Pintura a la tiza',
+        name: 'PINTURA A LA TIZA',
         price: 650,
         category: 'Pintura',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2019/01/tiza.png',
@@ -10,7 +10,7 @@ const products = [
     },
     {
         id: '2',
-        name: 'Acrilico',
+        name: 'ACRILICO',
         price: 250,
         category: 'Pintura',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2019/02/acrilico-50.png',
@@ -19,7 +19,7 @@ const products = [
     },
     {
         id: '3',
-        name: 'Pintura Vintage',
+        name: 'PINTURA VINTAGE',
         price: 900,
         category: 'Pintura',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2021/09/vintage-web.png',
@@ -28,7 +28,7 @@ const products = [
     },
     {
         id: '4',
-        name: 'Pasta de modelar',
+        name: 'PASTA DE MODELAR',
         price: 600,
         category: 'Pastas',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2019/02/pasta-de-modelar-1.png',
@@ -37,7 +37,7 @@ const products = [
     },
     {
         id: '5',
-        name: 'Pasta flexible',
+        name: 'PASTA FLEXIBLE',
         price: 600,
         category: 'Pastas',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2020/06/pastaflexible-100.png',
@@ -46,7 +46,7 @@ const products = [
     },
     {
         id: '6',
-        name: 'Laca Poliuretánica',
+        name: 'LACA POLIURETANICA',
         price: 650,
         category: 'Barnices y lacas',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2019/02/laca-poliuretanica.png',
@@ -55,7 +55,7 @@ const products = [
     },
     {
         id: '7',
-        name: 'Barniz y diluyente',
+        name: 'BARNIZ Y DILUYENTE',
         price: 800,
         category: 'Barnices y lacas',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2019/02/barnizdiluyente-al-agua.png',
@@ -64,7 +64,7 @@ const products = [
     },
     {
         id: '8',
-        name: 'Barniz extra mate',
+        name: 'BARNIZ EXTRA MATE',
         price: 800,
         category: 'Barnices y lacas',
         img:'https://www.eqartistica.com.ar/wp-content/uploads/2019/02/barniz-extra-mate.png',

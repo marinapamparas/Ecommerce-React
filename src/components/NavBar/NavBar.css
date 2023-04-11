@@ -2,17 +2,36 @@
 .logoimg{
     width: 100px;
     height: 100px;
+   
 }
 
 .navbar{
-    background-color: rgb(246, 236, 200);
+    background-color: rgba(246, 236, 200, 0.614);
     --bs-bg-opacity: 1;
-    justify-content: space-between;
-    padding: 15px;
+    padding: 10px 15px;
     
 }
 
 .navbarcontainer{
-    margin: 0px;   
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+    margin-left: 5vw;
 }
 
+
+
+.NavPasiva{
+    color: rgb(204, 71, 71);
+    font-size: 20px;
+    padding: 0px 15px 0px 60px;
+    text-decoration: none;
+    
+}
+
+.NavActiva{
+    color: rgb(117, 107, 107) !important;
+    font-size: 23px;
+    padding: 0px 15px 0px 60px;
+    text-decoration: none;
+}

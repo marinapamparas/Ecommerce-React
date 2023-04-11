@@ -1,0 +1,52 @@
+
+.contenedorDetalle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.imgDetalle{
+    width: 35vw;
+    height: 60vh;
+    object-fit: contain;
+}
+
+.contTituloPrecio{
+    margin: 20px;
+}
+
+.tituloDetalle{
+    font-size: 3.5vw;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    color:rgb(29, 24, 17);
+    margin-top: 10vh;
+ 
+}
+
+.precioDetalle{
+    font-size: 3vw;
+    text-align: left;
+    color: rgb(29, 24, 17);
+}
+
+.contStockDescrip{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 3vh 3vh 8vh;
+}
+
+.stockDetalle{
+font-size: small;
+color: rgb(29, 24, 17)
+}
+
+.descripDetalle{
+font-size: medium;
+display: flex;
+flex-wrap: wrap;
+color: rgb(29, 24, 17)
+}

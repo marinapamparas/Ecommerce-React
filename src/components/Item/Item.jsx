@@ -17,10 +17,10 @@ const Item = ({id, name, img, price, stock}) => {
             
                 <Card.Text>
                     Precio: ${price} <br></br>
-                    Stock disponible: {stock}
+                    Disponibles: {stock}
                 </Card.Text>
                 
-                <Link to={`/item/${id}`}>Ver detalle</Link>
+                <Link to={`/item/${id}`} className='square border border-danger border-2 rounded + linkDetalle'>Ver detalle</Link>
                 
             </Card.Body>
         </Card>

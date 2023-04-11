@@ -1,3 +1,13 @@
 .contenedorCard{
     margin: 5px 2.5px 10px 2.5px;
+    text-align: center;
+    background-color: rgba(246, 236, 200, 0.242);
+    border-color: rgba(154, 127, 29, 0.188) !important;
+}
+
+.linkDetalle{
+    text-decoration: none;
+    color: rgb(204, 71, 71);
+    padding: 5px;
+        
 }
