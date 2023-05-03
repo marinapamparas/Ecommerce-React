@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';
-import logo from 'c://Users/Marina/Desktop/MarinaPamparas/MarinaPamparas/src/assets/logo.png';
+import logo from '../../assets/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 
 
