@@ -5,9 +5,13 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../assets/logo.png';
 import { Link, NavLink } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
 
 const NavBar = () => {
+
+    const {totalQuantity} = useCartContext()
+    
     return(
         <Navbar expand="md" className='navbar'>
             <Container className="navbarcontainer">
@@ -19,8 +23,14 @@ const NavBar = () => {
                         <NavLink to={`/category/Pintura`} className={({isActive}) => isActive ? 'NavActiva' : 'NavPasiva'}>Pinturas</NavLink>
                         <NavLink to={`/category/Pastas`} className={({isActive}) => isActive ? 'NavActiva' : 'NavPasiva'}>Pastas</NavLink>
                         <NavLink to={`/category/Barnices y lacas`} className={({isActive}) => isActive ? 'NavActiva' : 'NavPasiva'}>Barnices y Lacas</NavLink>
-                        <CartWidget/>
+                        
 
+                    </Nav>
+                    <Nav>
+                        <Link to='/cart' className='contenedor' >
+                            <CartWidget/>
+                            {totalQuantity()}
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
                 

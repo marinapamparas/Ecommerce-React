@@ -6,21 +6,3 @@
     
 }
 
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(246, 236, 200, 0);
-    padding: 0px 0px 0px 15vw;
-    
-   
-}
-
-.cartcounter{
-    font-size: 15px;
-    color: rgb(128, 128, 128);
-    padding: 0px 0px;
-    border-radius: 30px;
-    display: flex;
-    align-items: left
-    ;
-}

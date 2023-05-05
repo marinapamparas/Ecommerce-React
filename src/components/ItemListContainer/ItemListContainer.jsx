@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import Loading from "../Loading/Loading"
@@ -12,52 +11,13 @@ const ItemListContainer = ({greeting}) =>{
     const {prodCategory} = useParams()
     const [isLoading, setIsLoading] = useState(true)
     
-
-    // useEffect (() => {
-       
-    //     const asyncFunc = prodCategory ? getProductsByCategory : getProducts
-
-    //     asyncFunc(prodCategory)
-    //         .then(response =>{
-                
-    //             setProducts(response)
-                
-    //         })
-    //         .catch(error => {
-    //             console.error(error)
-    //         })
-
-    // }, [prodCategory])
-    
-    // para usar en IDC
-    // useEffect(() =>{
-    //     const db = getFirestore()
-    //     const queryDoc = doc (db, 'productos', pid)
-
-    //     getDoc(queryDoc)
-    //     .then(resp => setProducto ({id:resp.id, ...resp.data()}))
-    // }, [])
-        
-    
-    // useEffect(() =>{
-    //         const db = getFirestore()
-    //         const queryCollection = collection (db, 'productos')
-    
-    //         getDocs(queryCollection)
-    //         .then(resp => setProducts(resp.docs.map(producto => ({id:producto.id, ...producto.data()}))))
-    //         .catch(error => {console.error(error)})
-           
-    //     }, [])
-       
+      
     useEffect(()=>{
         if (prodCategory) {
             const db = getFirestore()
             const queryCollection = collection(db, 'productos') 
     
-            const queryFilter = query(
-                queryCollection, 
-                where('category', '==', prodCategory) 
-            ) 
+            const queryFilter = query(queryCollection, where('category', '==', prodCategory)) 
             
             getDocs(queryFilter)
                 .then(resp => setProducts( resp.docs.map(producto => ({ id: producto.id, ...producto.data() }) ) ))

@@ -13,8 +13,8 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <CartProvider value={undefined}>
-        
+        <CartProvider>
+          
           <NavBar/>
 
           <Routes>
@@ -25,10 +25,12 @@ function App() {
             <Route path='/cart' element={<Cart/>}/>
             <Route path= '/checkout' element={<FormContainer/>}/>
             <Route path='*' element= {<Navigate to='/'/>} />
-          
+
           </Routes>
+          
 
         </CartProvider>
+        
 
       </BrowserRouter>
     </div>

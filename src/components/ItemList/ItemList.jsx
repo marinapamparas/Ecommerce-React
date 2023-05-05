@@ -1,10 +1,11 @@
 import Item from '../Item/Item'
 import "./ItemList.css"
+import { memo } from 'react';
 
 
 
-const ItemList = ({products}) => {
-   
+const ItemList = memo (({products}) => {
+    
     if (products !== undefined) {
         return (
             <div className='contenedorCards'>
@@ -12,7 +13,6 @@ const ItemList = ({products}) => {
             </div>
         )
     }   
-    
-}
+}) 
 
 export default ItemList
