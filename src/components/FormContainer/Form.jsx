@@ -102,7 +102,7 @@ export const Form = ({ formData, errors, validateForm, onChange }) => {
                     <br />
                     {errors && errors.confirmEmail && <span>{errors.confirmEmail}</span>}
                     <br/>
-                    <Button type="submit" className="botonSubmit">Enviar</Button>
+                    <Button type="submit" className="botonSubmit">Realizar compra</Button>
                 </form>
             </center>
         }

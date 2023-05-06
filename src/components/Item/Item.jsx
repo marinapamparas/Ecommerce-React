@@ -7,28 +7,27 @@ import Button from 'react-bootstrap/esm/Button';
 
 const Item = memo(({id, name, img, price, stock}) => {
     
-        return (
-    
-            <Card border="secondary"  style={{ width: '15rem' }} className='contenedorCard'>
+    return (
+
+        <Card border="secondary"  style={{ width: '15rem' }} className='contenedorCard'>
+            
+            <Card.Img variant="top" src={img} alt={name} />
+            
+            <Card.Body>
                 
-                <Card.Img variant="top" src={img} alt={name} />
+                <Card.Title> {name} </Card.Title>
+            
+                <Card.Text>
+                    Precio: ${price} <br></br>
+                    Disponibles: {stock}
+                </Card.Text>
                 
-                <Card.Body>
-                    
-                    <Card.Title> {name} </Card.Title>
+                <Link to={`/item/${id}`}><Button className='botonDetalle'>Ver detalle</Button></Link>
                 
-                    <Card.Text>
-                        Precio: ${price} <br></br>
-                        Disponibles: {stock}
-                    </Card.Text>
-                    
-                    <Link to={`/item/${id}`}><Button className='botonDetalle'>Ver detalle</Button></Link>
-                    
-                </Card.Body>
-            </Card>
-    
-    )})
+            </Card.Body>
+        </Card>
+
+    )
+})
 
 export default Item
-
-// className='square border border-danger border-2 rounded + linkDetalle'

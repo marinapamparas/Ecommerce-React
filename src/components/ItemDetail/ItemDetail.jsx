@@ -35,17 +35,14 @@ const ItemDetail = ({product}) => {
                     <p className='descripDetalle'>{product.description}</p>
                 </section>
                 <section>
-                    {
-                        quantityAdded ? (
-                            <>
-                            <Link to= '/cart'><Button className= 'botonesDetail'>Terminar compra</Button></Link>
-                            <Link to='/'><Button className= 'botonesDetail'>Seguir Comprando</Button></Link>
-                            </>
-                        ) : (
-                            <ItemCount initial= {1} stock={product.stock} onAdd={onAdd} />
-                        )
-                    }
-
+                    { quantityAdded ? (
+                        <>
+                        <Link to= '/cart'><Button className= 'botonesDetail'>Terminar compra</Button></Link>
+                        <Link to='/'><Button className= 'botonesDetail'>Seguir Comprando</Button></Link>
+                        </>
+                    ) : (
+                        <ItemCount initial= {1} stock={product.stock} onAdd={onAdd} />
+                    )}
                 </section>
             </article>
         </div>
