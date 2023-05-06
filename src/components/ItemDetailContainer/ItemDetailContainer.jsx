@@ -28,10 +28,8 @@ const ItemDetailContainer = ({greeting}) =>{
     return (        
         <>
             
-            <div>
-                { isLoading ? <Loading /> : <ItemDetail product = {product}/>}
+            { isLoading ? <Loading /> : <ItemDetail product = {product}/>}   
                 
-            </div>     
         </>   
     )
 }

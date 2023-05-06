@@ -1,39 +1,42 @@
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
-
+import "./Cart.css"
+import Button from 'react-bootstrap/esm/Button';
 
 
 const Cart = () => {
-        const {cart, clearCart, totalPrice, removeItem} = useCartContext ()
+        const {cart, clearCart, totalPrice} = useCartContext ()
+
     
     return (
-        cart.length === 0 ?
-            <center>
-                <h1>No hay productos en el carrito</h1>
-                <Link to='/'><button>Productos</button></Link>
-            </center>
+        <>
+        {cart.length === 0 ?
+            <div className="contCartVacio">
+                <h1 className="tituloCartVacio">EL CARRITO DE COMPRAS ESTÁ VACÍO</h1>
+                <Link to='/'><Button className="botonCartVacio">¿VAMOS A LLENARLO?</Button></Link>
+            </div>
         :
-            <div>
-                
-                { cart.map (p => <CartItem key={p.id} product={p}/>) }
-                
-                <h3>Total: {totalPrice()}</h3>
-                <button onClick={clearCart}>Vaciar Carrito</button>
-                
-                <Link to='/checkout'>Checkout</Link>
+            <div className="contenedorCart">
+                <div className="contVaciarCart">
+                    <Button onClick={clearCart} className="botonVaciarCart">Vaciar Carrito</Button>
+                </div>
+                <div className="contenedorCartBody">
+                    { cart.map (p => <CartItem key={p.id} product={p}/>) }
+                </div> 
+
+                <div className="contFooterCart">
+                    <h3 className="precioTotal">Total: ${totalPrice()}</h3>
+                    <Link to='/checkout'><Button className="botonTerminarCompra">Terminar compra</Button></Link>
+                </div>
 
             </div>
+        }
+        </>
+        
     )
  
 }
 
 export default Cart
 
-
-// { cart.map (p => <CartItem key={p.id} {...p}/>) }
-//                 {/* <button onClick={removeItem}>x</button> */}
-//                 <h3>Total: {totalPrice()}</h3>
-//                 <button onClick={clearCart}>Vaciar Carrito</button>
-                
-//                 <Link to='/checkout'>Checkout</Link>

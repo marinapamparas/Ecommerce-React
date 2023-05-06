@@ -1,42 +1,29 @@
 import "./CartItem.css"
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/esm/Button';
 
 
 const CartItem = ({product}) => {
 
-    const {cart, clearCart, totalPrice, removeItem} = useCartContext ()
+    const {removeItem} = useCartContext ()
   
     return (
 
-       
-
-        // <section>
-            
-        //     <img src={img} alt={name} />
-            
-        //     <div>
+        <table>
+            <tr className="tableRow">
+                <td className="contImg"><Link to={`/item/${product.id}`}><img src={product.img} alt={product.name} className="imgCart"/></Link></td>
                 
-        //         <h3> {name} </h3>
-            
-        //         <p>
-        //             Precio: ${price} <br></br>
-        //             Disponibles: {stock}
-        //         </p>
-                
-        //         <Link to={`/item/${id}`} className='square border border-danger border-2 rounded + linkDetalle'>Ver detalle</Link>
-                
-        //     </div>
-        // </section>
-
-        <div>
-            <Link to={`/item/${product.id}`}><img src={product.img} alt={product.name} className="imgCart"/></Link>
-            
-            <div >
-                <h4 >{product.name}</h4><span><em>Precio:</em>{product.price}</span><span><em>Cantidad:</em> {product.quantity}</span>
-            </div>
-            <button onClick={()=> removeItem(product.id)}>x</button>
-        </div>
+                <td className="contDatosItem">
+                    <h3 className="tituloItem">{product.name}</h3>
+                    <div className="datosItem">
+                        <p className="textoDatosItem">Precio:  {product.price}</p>
+                        <p className="textoDatosItem">Cantidad:  {product.quantity}</p>
+                    </div>
+                </td>
+                <td className="contRemoveItem"><Button onClick={()=> removeItem(product.id)} className="botonRemoverItem">x</Button></td>
+            </tr>
+        </table>
 
 
     )

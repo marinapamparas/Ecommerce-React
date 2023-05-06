@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import "./Item.css"
 import { Link } from 'react-router-dom';
 import { memo } from 'react';
+import Button from 'react-bootstrap/esm/Button';
 
 const Item = memo(({id, name, img, price, stock}) => {
     
@@ -21,7 +22,7 @@ const Item = memo(({id, name, img, price, stock}) => {
                         Disponibles: {stock}
                     </Card.Text>
                     
-                    <Link to={`/item/${id}`} className='square border border-danger border-2 rounded + linkDetalle'>Ver detalle</Link>
+                    <Link to={`/item/${id}`}><Button className='botonDetalle'>Ver detalle</Button></Link>
                     
                 </Card.Body>
             </Card>
@@ -29,3 +30,5 @@ const Item = memo(({id, name, img, price, stock}) => {
     )})
 
 export default Item
+
+// className='square border border-danger border-2 rounded + linkDetalle'

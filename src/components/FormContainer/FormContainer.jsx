@@ -7,21 +7,20 @@ import { Form } from "./Form"
 const FormWithValidation = withFormValidation(Form)
 
 export const FormContainer = ()=> {
-    const [ formData,setFormData ] = useState({
-        nombre: '',
-        email: ''
-    })
+    const [ formData, setFormData ] = useState({name: '', phone:'', email: '', confirmEmail: ''})
 
-    const onChange = (e) => {
+    const onChange = (event) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [event.target.name]: event.target.value
         })
     }   
 
     return (
         <div>
+            
             <FormWithValidation formData={formData} onChange={onChange} />
+            
         </div>
     )
 }

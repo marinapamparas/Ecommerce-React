@@ -5,9 +5,15 @@
     border-color: rgba(154, 127, 29, 0.188) !important;
 }
 
-.linkDetalle{
-    text-decoration: none;
-    color: rgb(204, 71, 71);
-    padding: 5px;
-        
+.botonDetalle{
+    width: 10vw;
+    padding: 7px 5px;
+    background-color: rgb(205, 196, 164) !important;
+    border-color: rgb(205, 196, 164)!important;
+    color: black;
+}
+
+.botonDetalle:hover{
+    background-color:rgb(111, 106, 86)!important;
+    transition: 0.5s;
 }

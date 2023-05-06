@@ -4,11 +4,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 20vh;
 }
 
 .loader{
     border: 5px solid #f3f3f3;
-    border-top: 5px solid #5e5858;
+    border-top: 5px solid #c34d96;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -27,6 +28,6 @@
 .cargando{
     font-weight: bold;
     font-size: medium;
-    font-style: italic;
-    color: #5e5858;
+    color: #c34d96;
+
 }

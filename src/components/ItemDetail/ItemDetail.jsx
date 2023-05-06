@@ -3,6 +3,7 @@ import "./ItemDetail.css";
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
 import {useCartContext} from '../../context/CartContext';
+import Button from 'react-bootstrap/esm/Button';
 
 
 const ItemDetail = ({product}) => {
@@ -37,8 +38,8 @@ const ItemDetail = ({product}) => {
                     {
                         quantityAdded ? (
                             <>
-                            <Link to= '/cart'>Terminar compra</Link>
-                            <Link to='/'>Seguir Comprando</Link>
+                            <Link to= '/cart'><Button className= 'botonesDetail'>Terminar compra</Button></Link>
+                            <Link to='/'><Button className= 'botonesDetail'>Seguir Comprando</Button></Link>
                             </>
                         ) : (
                             <ItemCount initial= {1} stock={product.stock} onAdd={onAdd} />

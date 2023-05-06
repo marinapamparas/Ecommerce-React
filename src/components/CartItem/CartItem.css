@@ -1,4 +1,59 @@
+.tableRow{
+    display: flex;
+    justify-content: center;
+    border: solid;
+   border-color: rgb(255, 229, 196);
+   border-radius: 90px;
+   margin: 5px;
+
+}
+
+
+.contImg{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+}
 .imgCart{
-    width: 50px;
-    height: 50px;
+    object-fit: contain;
+    width: 150px;
+    height: 150px;
+
+}
+.contDatosItem{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tituloItem{
+    font-size: 40px;
+
+}
+
+.datosItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.botonRemoverItem{
+    width: 2vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 166, 159) !important;
+    border-color: rgb(245, 166, 159) !important;
+}
+.contRemoveItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+}
+
+.textoDatosItem{
+    font-size: 20px;
+    margin: 0;
 }

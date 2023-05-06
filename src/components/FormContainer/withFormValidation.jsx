@@ -1,40 +1,58 @@
 import { useState } from "react"
 
-export const withFormValidation = (WrappedComponent) =>{ // withFormValidation(Form)
+export const withFormValidation = (WrappedComponent) =>{ 
     
-    // componente transformado
+    
     const WithFormValidation = (props) => {
         const [errors, setError] = useState({})
+        
+        const emailValidation= (email) => {
+            
+            const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+            return regex.test(email) ?  true :  false;
+        }
 
         const validateForm = () => {
             let newErrors = {}         
             let isValid = true
-       
-            if (!props.formData.nombre) {
-                newErrors.nombre = 'El nombre es obligatorio'  
+            
+            if (!props.formData.name) {
+                newErrors.name = 'El nombre es obligatorio'  
                 isValid = false              
             }
-            if (!props.formData.telefono) {
-                newErrors.nombre = 'El telefono es obligatorio'  
+            if (props.formData.phone === '') {
+                newErrors.phone = 'El telefono es obligatorio'  
                 isValid = false              
             }
-            if (!props.formData.email) {
-                newErrors.email = 'El mail es obligatorio'                
+            
+            if (props.formData.confirmEmail === '') {
+                newErrors.confirmEmail = 'Confirmar el mail es obligatorio'                
                 isValid = false
             }
+            if (props.formData.confirmEmail !== props.formData.email) {
+                newErrors.confirmEmail = 'El mail debe ser igual al anterior'                
+                isValid = false
+            }
+            if(emailValidation(props.formData.email) === false) {
+                newErrors.email = 'No es un email valido'                
+                isValid = false
+            }
+
+            
             setError(newErrors)     
-            return isValid       
+            return isValid    
+               
         }
 
         return (
-            <WrappedComponent // Form
-                {...props}
-                errors={errors} 
-                validateForm={validateForm} 
-            /> // <Form validateForm error {...props}  />
-         )
+            <WrappedComponent {...props} errors={errors} validateForm={validateForm} /> 
+        )
 
     }
 
     return WithFormValidation
 }
+
+
+

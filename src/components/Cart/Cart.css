@@ -1,0 +1,89 @@
+.contCartVacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh;
+}
+
+.tituloCartVacio{
+      
+    padding: 2%;
+    border-radius: 30px;
+    color: rgb(206,220,207);
+}
+
+.botonCartVacio{
+    width: 10vw;
+    padding: 20px 10px;
+    margin-top: 5vh;
+    background-color: rgb(205, 196, 164) !important;
+    border-color: rgb(205, 196, 164)!important;
+    color: white;
+    border-radius: 30px;
+}
+
+.botonCartVacio:hover{
+    background-color:rgb(111, 106, 86)!important;
+    transition: 0.5s;
+}
+
+.contenedorCart{
+    margin: 1%;
+    width: 100vw;
+    height: 70vh;
+    display: inline-block;
+}
+
+.contenedorCartBody{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 8%;
+
+
+}
+
+.contFooterCart{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+    margin-top: 30px;
+    padding-right: 18%;
+
+}
+
+.botonTerminarCompra{
+    width: 15vw;
+    padding: 7px 5px;
+    background-color: rgb(206, 220, 207) !important;
+    border-color: rgb(206, 220, 207)!important;
+    color: white;
+}
+.botonTerminarCompra:hover{
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+
+.contVaciarCart{
+    display: flex;
+    justify-content: right;
+    padding-right: 20%;
+}
+.botonVaciarCart{
+    width: 10vw;
+    padding: 7px 5px;
+    margin-right: 1vw;
+    background-color: rgb(245, 166, 159) !important;
+    border-color: rgb(245, 166, 159)!important;
+    color: white;
+}
+
+.botonVaciarCart:hover{
+    width: 12vw;
+    transition: 0.5s;
+}
+
+.precioTotal{
+    color: rgb(194, 187, 205);
+    padding-right: 1%;
+}
