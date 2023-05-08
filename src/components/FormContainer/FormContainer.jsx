@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { withFormValidation } from "./withFormValidation"
-import { Form } from "./Form"
+import { Formulario } from "./Formulario"
 
-const FormWithValidation = withFormValidation(Form)
+const FormWithValidation = withFormValidation(Formulario)
 
 export const FormContainer = ()=> {
     const [ formData, setFormData ] = useState({name: '', phone:'', email: '', confirmEmail: ''})

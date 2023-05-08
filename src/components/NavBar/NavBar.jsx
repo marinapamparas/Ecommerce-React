@@ -26,11 +26,11 @@ const NavBar = () => {
                         
 
                     </Nav>
-                    <Nav>
-                        <Link to='/cart' className='contenedor' >
+                    <Nav className='contenedorCartWidget'>
+                        <Link to='/cart'>
                             <CartWidget/>
-                            {totalQuantity()}
                         </Link>
+                        <p className='cantidadCart'>{totalQuantity()}</p>
                     </Nav>
                 </Navbar.Collapse>
                 

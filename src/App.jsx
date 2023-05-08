@@ -19,7 +19,7 @@ function App() {
 
           <Routes>
             
-            <Route path='/' element={<ItemListContainer greeting='Productos de Artistica al mejor costo'/>} />
+            <Route path='/' element={<ItemListContainer greeting='PRODUCTOS DE ARTISTICA AL MEJOR COSTO'/>} />
             <Route path='/category/:prodCategory' element={<ItemListContainer greeting='Para asesoramiento personalizado, contactanos!'/>} />
             <Route path='/item/:itemId' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Cart/>}/>

@@ -1,19 +1,21 @@
 .contenedorCard{
     margin: 5px 2.5px 10px 2.5px;
     text-align: center;
-    background-color: rgba(246, 236, 200, 0.242);
-    border-color: rgba(154, 127, 29, 0.188) !important;
+    background-color: rgba(241, 145, 136, 0.095);
+    border: solid 2px;
+    border-color: rgba(241, 145, 136, 0.319) !important;
 }
 
 .botonDetalle{
     width: 10vw;
     padding: 7px 5px;
-    background-color: rgb(205, 196, 164) !important;
-    border-color: rgb(205, 196, 164)!important;
-    color: black;
+    background-color: rgb(173, 219, 218) !important;
+    border-color: rgb(173, 219, 218)!important;
+    color: white;
 }
 
 .botonDetalle:hover{
-    background-color:rgb(111, 106, 86)!important;
+    background-color:rgb(138, 222, 221)!important;
+    border-color: rgb(138, 222, 221)!important;
     transition: 0.5s;
 }

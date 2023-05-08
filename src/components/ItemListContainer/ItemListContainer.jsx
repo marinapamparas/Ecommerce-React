@@ -13,10 +13,10 @@ const ItemListContainer = ({greeting}) =>{
     
       
     useEffect(()=>{
+        const db = getFirestore()
+        const queryCollection = collection(db, 'productos') 
+        
         if (prodCategory) {
-            const db = getFirestore()
-            const queryCollection = collection(db, 'productos') 
-    
             const queryFilter = query(queryCollection, where('category', '==', prodCategory)) 
             
             getDocs(queryFilter)
@@ -24,9 +24,7 @@ const ItemListContainer = ({greeting}) =>{
                 .catch(err => console.log(err))
                 .finally(()=> setIsLoading(false))        
         } else {
-            const db = getFirestore()
-            const queryCollection = collection(db, 'productos')     
-            
+ 
             getDocs(queryCollection)
                 .then(resp => setProducts( resp.docs.map(producto => ({ id: producto.id, ...producto.data() }) ) ))
                 .catch(err => console.log(err))

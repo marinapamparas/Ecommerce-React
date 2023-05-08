@@ -37,8 +37,8 @@ const ItemDetail = ({product}) => {
                 <section>
                     { quantityAdded ? (
                         <>
-                        <Link to= '/cart'><Button className= 'botonesDetail'>Terminar compra</Button></Link>
-                        <Link to='/'><Button className= 'botonesDetail'>Seguir Comprando</Button></Link>
+                        <Link to= '/cart'><Button className= 'botonTerCompra'>Terminar compra</Button></Link>
+                        <Link to='/'><Button className= 'botonSeguirComprando'>Seguir Comprando</Button></Link>
                         </>
                     ) : (
                         <ItemCount initial= {1} stock={product.stock} onAdd={onAdd} />

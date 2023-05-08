@@ -17,13 +17,14 @@
     width: 20vw;
     margin-left: 50px;
     padding: 10px 5px;
-    background-color: rgb(205, 196, 164) !important;
-    border-color: rgb(205, 196, 164)!important;
+    background-color: rgb(241, 144, 136) !important;
+    border-color: rgb(241, 144, 136)!important;
     color: white;
 }
 
 .botonAgregar:hover{
-    background-color:rgb(111, 106, 86)!important;
+    background-color:rgb(194, 187, 205)!important;
+    border-color: rgb(194, 187, 205)!important;
     transition: 0.5s;
 }
 

@@ -17,8 +17,8 @@
     width: 10vw;
     padding: 20px 10px;
     margin-top: 5vh;
-    background-color: rgb(205, 196, 164) !important;
-    border-color: rgb(205, 196, 164)!important;
+    background-color: rgb(181, 167, 203) !important;
+    border-color: rgb(181, 167, 203)!important;
     color: white;
     border-radius: 30px;
 }
@@ -55,8 +55,8 @@
 .botonTerminarCompra{
     width: 15vw;
     padding: 7px 5px;
-    background-color: rgb(206, 220, 207) !important;
-    border-color: rgb(206, 220, 207)!important;
+    background-color: rgb(241, 144, 136) !important;
+    border-color: rgb(241, 144, 136)!important;
     color: white;
 }
 .botonTerminarCompra:hover{
@@ -73,17 +73,17 @@
     width: 10vw;
     padding: 7px 5px;
     margin-right: 1vw;
-    background-color: rgb(245, 166, 159) !important;
-    border-color: rgb(245, 166, 159)!important;
+    background-color: rgb(181, 167, 203) !important;
+    border-color: rgb(181, 167, 203) !important;
     color: white;
 }
 
 .botonVaciarCart:hover{
     width: 12vw;
     transition: 0.5s;
-}
+} 
 
 .precioTotal{
-    color: rgb(194, 187, 205);
+    color: black;
     padding-right: 1%;
 }
