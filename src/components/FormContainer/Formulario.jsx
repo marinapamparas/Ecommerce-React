@@ -4,8 +4,7 @@ import { getFirestore, collection, addDoc} from "firebase/firestore";
 import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Modal from 'react-bootstrap/Modal';
-import { Link } from "react-router-dom";
+import { ModalCentral } from "../ModalCentral/ModalCentral";
 import "./Formulario.css"
 
 
@@ -33,9 +32,7 @@ export const Formulario = ({ formData, errors, validateForm, onChange }) => {
             generarOrden()
             setModalShow(true)   
             }
-        }
-               
-              
+        }      
     }
   
         
@@ -54,39 +51,7 @@ export const Formulario = ({ formData, errors, validateForm, onChange }) => {
         .then(resp => setId(resp.id))
         .catch(error => console.log(error))
         .finally (()=> clearCart())
-    }
-
-    function ModalCentral (props) {
-        return (
-            <> 
-                <Modal
-                    {...props}
-                    size="lg"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered
-                    backdrop="static"
-                    keyboard={false}
-                    className="modalEntero"
-                >
-                    <Modal.Header className="modalHeader">
-                    <Modal.Title id="contained-modal-title-vcenter">
-                    ¡FELICITACIONES!
-                    </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body className="modalBody">
-                        <h4>Su compra esta siendo procesada</h4><br></br>
-                        <p>Valor de tu compra: ${order.total}</p>
-                        <p>N° de orden generada: {id}</p>
-                    </Modal.Body>
-                    <Modal.Footer className="modalFooter">
-                        <Link to={'/'}><Button variant="secondary" className="botonModal">Volver al inicio</Button></Link>
-                    </Modal.Footer>
-                </Modal>
-   
-            </>
-        );
-      }
-      
+    }   
 
     return (
         <center>
@@ -159,7 +124,7 @@ export const Formulario = ({ formData, errors, validateForm, onChange }) => {
                 <Button type='submit' className="botonSubmit">Realizar compra</Button>
                 
                 
-                <ModalCentral show={modalShow} onHide={() => setModalShow(false)}/>
+                <ModalCentral show={modalShow} onHide={() => setModalShow(false)} id={id} order={order}/>
                 
             </Form>
 
@@ -168,5 +133,3 @@ export const Formulario = ({ formData, errors, validateForm, onChange }) => {
     )
 }
 
-
-// onClick={() => (formData != undefined) ? setModalShow(true) : setModalShow (false)}

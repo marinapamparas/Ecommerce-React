@@ -29,34 +29,3 @@
 .inputGroup{
     width: 50%;
 }
-
-
-
-.modalHeader{
-    background: rgb(246,114,114);
-    background: linear-gradient(90deg, rgba(246,114,114,0.6475840336134453) 0%, rgba(40,204,136,0.7708333333333334) 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modalFooter{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.botonModal{
-    background-color: rgb(241, 144, 136) !important;
-    border-color: rgb(241, 144, 136)!important;
-    color: white;
-}
-
-.modalBody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
