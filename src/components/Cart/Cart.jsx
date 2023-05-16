@@ -5,9 +5,10 @@ import "./Cart.css"
 import Button from 'react-bootstrap/esm/Button';
 
 
-const Cart = () => {
-        const {cart, clearCart, totalPrice} = useCartContext ()
 
+const Cart = () => {
+    
+    const {cart, clearCart, totalPrice} = useCartContext ()
     
     return (
         <>
