@@ -1,0 +1,13 @@
+.contenedorCarousel{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.carousel{
+    width: 85% !important;
+    height: 20%;
+    padding: 10px;
+    
+}

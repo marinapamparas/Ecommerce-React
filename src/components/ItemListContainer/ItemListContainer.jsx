@@ -4,9 +4,10 @@ import "./ItemListContainer.css"
 import Loading from "../Loading/Loading"
 import { useParams } from "react-router-dom"
 import { collection, getDocs, getFirestore, query, where, limit, orderBy} from 'firebase/firestore'
+import CarouselIntro from "../CarouselIntro/CarouselIntro"
 
 
-const ItemListContainer = ({greeting}) =>{
+const ItemListContainer = ({greeting, isHome}) =>{
     const [products, setProducts] = useState ()
     const {prodCategory} = useParams()
     const [isLoading, setIsLoading] = useState(true)
@@ -42,12 +43,15 @@ const ItemListContainer = ({greeting}) =>{
     
     return (        
         <>
-            <h1 className="h1">{greeting}</h1>
-            
-            <div className="contenedoritemlist">
-                { isLoading ? <Loading /> : <ItemList products = {products}/>}
-            </div>     
-        </>   
+        {isHome ? <CarouselIntro/> : ''}
+        
+        <h1 className="h1">{greeting}</h1> 
+    
+        <div className="contenedoritemlist">
+            { isLoading ? <Loading /> : <ItemList products = {products}/>}
+        </div>  
+        
+        </>       
     )
 }
 

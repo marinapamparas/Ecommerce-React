@@ -19,8 +19,8 @@ function App() {
 
           <Routes>
             
-            <Route path='/' element={<ItemListContainer greeting='PRODUCTOS DE ARTISTICA AL MEJOR COSTO'/>} />
-            <Route path='/category/:prodCategory' element={<ItemListContainer greeting='Para asesoramiento personalizado, contactanos!'/>} />
+            <Route path='/' element={<ItemListContainer greeting='PRODUCTOS DE ARTISTICA AL MEJOR COSTO' isHome={true}/>} />
+            <Route path='/category/:prodCategory' element={<ItemListContainer greeting='Para asesoramiento personalizado, contactanos!' isHome={false}/>} />
             <Route path='/item/:itemId' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Cart/>}/>
             <Route path= '/checkout' element={<FormContainer/>}/>
