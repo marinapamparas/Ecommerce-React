@@ -30,6 +30,7 @@ export const ModalCentral = ({id, order, ...props}) => {
                 <Modal.Body className="modalBody">
                     <h4>Su compra esta siendo procesada</h4><br></br>
                     <p>Valor de tu compra: ${orderTotal}</p>
+                    <p>N° de orden generada: {id}</p>
                 </Modal.Body>
                 <Modal.Footer className="modalFooter">
                     <Link to={'/'}><Button variant="secondary" className="botonModal">Volver al inicio</Button></Link>
