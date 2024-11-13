@@ -1,6 +1,12 @@
 ## <b>OVERVIEW</b>
 Painti Web is an e-commerce application built with React that connects to a Firestore API. It allows users to view a list of products, see detailed information, add products to a shopping cart, and create purchase orders (compiling products along with user information).
 
+<div align='center'>
+  <a href="https://ecommerce-react-3dm7j5jc9-marinapamparas.vercel.app/" target="_blank">
+    Deploy
+  </a>
+</div>
+
 ## <b>INSTALLATION</b>
 Clone this repository.
 Install dependencies with the command npm install.
