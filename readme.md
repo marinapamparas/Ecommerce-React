@@ -1,25 +1,23 @@
-# PRESENTACIÓN
+## <b>OVERVIEW</b>
+Painti Web is an e-commerce application built with React that connects to a Firestore API. It allows users to view a list of products, see detailed information, add products to a shopping cart, and create purchase orders (compiling products along with user information).
 
-Painti web es un e-commerce construido con React, que consume una API de Firestore. Permite a los usuarios ver una lista de productos, el detalle de los mismos, agregarlos a un carrito de compras y generar ordenes de compras (recopilando los productos junto con la información del usuario).
+## <b>INSTALLATION</b>
+Clone this repository.
+Install dependencies with the command npm install.
+Create a .env file in the root of the project and add your Firestore credentials.
+To run the application, use the command npm run dev.
 
-# INSTALACIÓN
+## <b>FEATURES</b>
 
-- Clonar este repositorio.
-- Instalar las dependencias con el comando "npm install".
-- Crear un archivo .env en la raíz del proyecto y agregar las credenciales de Firestore.
-- Para ejecutar la aplicación utilizar el comando "npm run dev".
+-   Product Page: Displays a list of all available products, each showing a category, name, image, and price. Users can click on any product to view details (including stock and description).
+-   Product Details Page: Shows more information about the selected product, including image, name, price, stock, and description. From this page, users can add items to the cart, proceed to checkout, or continue shopping (linking back to the product list).
+-   Shopping Cart: The cart displays a list of all products added by the user, along with the selected quantities of each product and the total purchase price. Users can empty the entire cart or remove individual products. The next step is to finalize the purchase, which takes the user to the form page.
+-   Checkout Form: Contains input fields to collect user contact information. The required fields are: name, phone, email, and email confirmation. Once the form is complete, the user can select "Place Order."
+-   Order Confirmation: Upon completing the purchase, the user is redirected to the order confirmation page, where an order ID and the total price are displayed.
 
-# FUNCIONALIDADES
+## <b>DEPENDENCIES</b>
 
-- Página de productos: muestra un listado de todos los productos disponibles. Cada uno cuenta con categoria, nombre, imagen y precio. El usuario puede hacer click en cada uno de ellos para ver los detalles (stock y descripción del mismo).
-- Página de detalles: muestra mas información sobre el producto, incluyendo: imagen, nombre, precio, stock y descripción. Desde esta página el usuario puede agregar al carrito, finalizar la compra o continuar comprando (link hacia el listado de productos).
-- Carrito: el carrito muestra un listado de todos los productos que el usuario ha agregado al carrito, junto con las cantidades seleccionadas de cada producto y el precio total de la compra. El usuario puede vaciarlo en su totalidad o eliminar individualmente cada producto. El siguiente paso es finalizar la compra, lo que lleva al usuario a la página del formulario.
-- Formulario: cuenta con inputs para recopilar la información de contacto del usuario. Se piden los siguientes datos: nombre, telefono, mail y confirmación de mail. Una vez haya completado todos los datos selecciona "realizar compra".
-- Orden de compra: Como finalización de la compra se redirige al usuario a la página de orden de compra, donde se muestra un Id de la compra realizada y el precio total de la misma.
-
-# DEPENDENCIAS
-
-- React: Se utiliza para desarrollar toda la app
-- Firebase: Se utiliza para guardar en ella 2 colecciones, productos y ordenes de compra.
-- React-bootstrap: Se utiliza para dar estilos a botones y cards.
-- React-router-dom: Se utiliza para desarrollar la navegabilidad de la app.
+-   React: Used to build the entire app.
+-   Firebase: Used to store two collections—products and purchase orders.
+-   React-Bootstrap: Used to style buttons and cards.
+-   React-Router-Dom: Used to implement navigation within the app.
